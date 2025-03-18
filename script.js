@@ -16,13 +16,14 @@ swap.addEventListener('click', infoSwap);
 
 main();
 function main() {
-    let currency = { "BRL": "Real", "EUR": "Euro", "USD": "Dollar" };
+    let currency = { "BRL": "Real(BRL)", "EUR": "Euro(EUR)", "USD": "Dolar(USD)" };
     let options = [];
     for (var [key, value] of Object.entries(currency)) {
       options.push(`<option value='${key}'>${value}</option>`);
     }
     label_from_currency.innerHTML = options.join('\n');
     label_to_currency.innerHTML = options.join('\n');
+
     calculate();
   }
   
@@ -47,5 +48,7 @@ function main() {
     let rate = rates[to];
     tax_info.innerText = `1 ${getInfoSelect(label_from_currency)} = ${rate} ${getInfoSelect(label_to_currency)}`
     input_to_ammount.value = (input_from_ammount.value * rate).toFixed(2);
+    document.getElementById('currency1-name').innerHTML = ` ${getInfoSelect(label_from_currency)}`.toUpperCase();
+    document.getElementById('currency2-name').innerHTML = ` ${getInfoSelect(label_to_currency)}`.toUpperCase();
   }
   
