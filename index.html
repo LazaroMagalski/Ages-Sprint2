@@ -3,20 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Conversor de Moeda Grupo 4</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <span id="tax_info"></span>
-    <div>
-        <select id="from_currency"></select>
-        <input type="number" id="from_ammount" value="1" />
-    </div>
-    <button id="swap"><img src="swap.png" alt=""></button>
-    <div>
-        <select id="to_currency"></select>
-        <input type="number" id="to_ammount" />
-    </div>
-    <script src="script.js"></script>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Conversor de Moedas</h1>
+        <h2><span id="currency1-name">REAIS BRASILEIROS</span> PARA <span id="currency2-name">DÓLARES AMERICANOS</span></h2>
+    </header>
+
+    <!-- Área principal do conversor -->
+    <main>
+        <section class="conversor">
+            <form id="currency-form">
+                
+                <span id="tax_info"></span>
+                <!-- GRID para alinhamento -->
+                <div class="grid-container">
+
+                    <!-- Coluna 1: Quantia -->
+                    <div class="grid-item">
+                        <label for="from_ammount">Quantia</label>
+                        <input type="text" id="from" placeholder="Digite o valor" required>
+                    </div>
+
+                    <!-- Coluna 2: Moeda de origem -->
+                    <div class="grid-item">
+                        <select id="from_currency">
+                            <option value="BRL" selected>BRL</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </div>
+
+                    <!-- Coluna 3: Botão de troca -->
+                    <div class="grid-item switch-container">
+                        <button id="swap"><img src="swap.png" alt=""></button>
+                    </div>
+
+                    <!-- Coluna 4: Resultado -->
+                    <div class="grid-item">
+                        <label for="to_currency">Converter para</label>
+                        <input type="text" id="to_ammount">
+                    </div>
+
+                    <!-- Coluna 5: Moeda de destino -->
+                    <div class="grid-item">
+                        <select id="target-currency">
+                            <option value="BRL">BRL</option>
+                            <option value="USD" selected>USD</option>
+                        </select>
+                    </div>
+
+                    <!-- Coluna 6: Câmbio do dia -->
+                    <div class="grid-item">
+                        <span class="exchange-result">R$1,000 BRL = $<span class="exchange">0,1759</span> USD</span>
+                        </div>
+
+                     <!-- Coluna 7: Hora do câmbio -->
+                     <div class="grid-item">
+                        <label for>Câmbio comercial às <span class=exchange-time>15:55 UTC.</span></label>
+                        </div>   
+                        
+                </div> <!-- Fim do GRID -->
+
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Desenvolvido pelo Grupo 4 - Sprint 2</p>
+    </footer>
+<script src="script.js"></script>
 </body>
 </html>
