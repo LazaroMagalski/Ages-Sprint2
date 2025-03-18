@@ -48,3 +48,4 @@ function main() {
     tax_info.innerText = `1 ${getInfoSelect(label_from_currency)} = ${rate} ${getInfoSelect(label_to_currency)}`
     input_to_ammount.value = (input_from_ammount.value * rate).toFixed(2);
   }
+  

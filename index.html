@@ -20,22 +20,19 @@
         <section class="conversor">
             <form id="currency-form">
                 
-                <span id="tax_info"></span>
+                
                 <!-- GRID para alinhamento -->
                 <div class="grid-container">
 
                     <!-- Coluna 1: Quantia -->
                     <div class="grid-item">
-                        <label for="from_ammount">Quantia</label>
-                        <input type="text" id="from" placeholder="Digite o valor" required>
+                        <label>Quantia</label>
+                        <input type="text" id="from_ammount" placeholder="Digite o valor" required>
                     </div>
 
                     <!-- Coluna 2: Moeda de origem -->
                     <div class="grid-item">
-                        <select id="from_currency">
-                            <option value="BRL" selected>BRL</option>
-                            <option value="USD">USD</option>
-                        </select>
+                        <select id="from_currency"></select>
                     </div>
 
                     <!-- Coluna 3: Botão de troca -->
@@ -45,27 +42,23 @@
 
                     <!-- Coluna 4: Resultado -->
                     <div class="grid-item">
-                        <label for="to_currency">Converter para</label>
-                        <input type="text" id="to_ammount">
+                        <label">Converter para</label>
+                       
                     </div>
 
                     <!-- Coluna 5: Moeda de destino -->
                     <div class="grid-item">
-                        <select id="target-currency">
-                            <option value="BRL">BRL</option>
-                            <option value="USD" selected>USD</option>
-                        </select>
+                        <select id="to_currency"></select>
+                        <input type="text" id="to_ammount">
                     </div>
 
                     <!-- Coluna 6: Câmbio do dia -->
                     <div class="grid-item">
-                        <span class="exchange-result">R$1,000 BRL = $<span class="exchange">0,1759</span> USD</span>
+                        <span id="tax_info"></span>
+                        
                         </div>
 
-                     <!-- Coluna 7: Hora do câmbio -->
-                     <div class="grid-item">
-                        <label for>Câmbio comercial às <span class=exchange-time>15:55 UTC.</span></label>
-                        </div>   
+                
                         
                 </div> <!-- Fim do GRID -->
 
