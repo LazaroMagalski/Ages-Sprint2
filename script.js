@@ -23,7 +23,6 @@ function main() {
     }
     label_from_currency.innerHTML = options.join('\n');
     label_to_currency.innerHTML = options.join('\n');
-
     calculate();
   }
   
@@ -50,5 +49,21 @@ function main() {
     input_to_ammount.value = (input_from_ammount.value * rate).toFixed(2);
     document.getElementById('currency1-name').innerHTML = ` ${getInfoSelect(label_from_currency)}`.toUpperCase();
     document.getElementById('currency2-name').innerHTML = ` ${getInfoSelect(label_to_currency)}`.toUpperCase();
+    if(label_from_currency.value == "BRL") {
+      document.getElementById('img_amount').src = 'https://flagcdn.com/16x12/br.png';
+    }else if(label_from_currency.value == "EUR") {
+      document.getElementById('img_amount').src = 'https://flagcdn.com/16x12/eu.png';
+    }else{
+      document.getElementById('img_amount ').src = 'https://flagcdn.com/16x12/us.png';
+    }
+
+    if(label_to_currency.value == "BRL") {
+      document.getElementById('img_currency').src = 'https://flagcdn.com/16x12/br.png';
+    }else if(label_to_currency.value == "EUR") {
+      document.getElementById('img_currency').src = 'https://flagcdn.com/16x12/eu.png';
+    }else{
+      document.getElementById('img_currency').src = 'https://flagcdn.com/16x12/us.png';
+    }
+    //
   }
   
