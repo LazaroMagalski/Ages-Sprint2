@@ -26,18 +26,18 @@ header{
 
 /* <!-- BLOCO BRANCO --> */
 .grid-container{
-    height: 25vh;
+    height: 20vh;
     width: 80vh;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
-    box-shadow: -1px 7px 14px 0px rgba(0,0,0,0.56);
+    box-shadow: -1px 5px 14px -1px rgba(0,0,0,0.56);
     padding: 5px;
 }
 
 /* <!-- BLOCO VERDE --> */
 .grid-container1{
     position: absolute;
-    top: 550px;
+    top: 530px;
     left: 458px;
     background-color: rgb(109, 192, 56);
     height: 4vh;
@@ -50,17 +50,17 @@ header{
 /* <!-- TEXTO CIMA QUANTIA --> */
 .quantia{
     position: absolute;
-    top: 360px;
+    top: 380px;
     left: 480px;
     font-size: small;
     font-weight: 800;
     color: gray
 }
 
-/* <!-- TEXTO CIMA QUANTIA --> */
+/* <!-- TEXTO CIMA RESPOSTA --> */
 .converter{
     position: absolute;
-    top: 360px;
+    top: 380px;
     left: 850px;
     font-size: small;
     font-weight: 800;
@@ -71,7 +71,7 @@ header{
 /* <!-- SELETOR MOEDA1 --> */
 #from_currency{
     position: absolute;
-    top: 383px;
+    top: 403px;
     left: 665px;
     background-color: rgb(255, 255, 255);
     box-sizing: none;
@@ -88,7 +88,7 @@ header{
 /* <!-- SELETOR MOEDA2 --> */
 #to_currency{
     position: absolute;
-    top: 383px;
+    top: 403px;
     left: 1035px;
     background-color: rgb(255, 255, 255);
     box-sizing: none;
@@ -105,7 +105,7 @@ header{
 /* <!-- TEXTO QUANTIA --> */
 #from_ammount{
     position: absolute;
-    top: 378px;
+    top: 398px;
     left: 480px;
     box-sizing: border-box;
     font-size: large;
@@ -121,7 +121,7 @@ header{
 /* <!-- TEXTO RESULTADO --> */
 #to_ammount{
     position: absolute;
-    top: 378px;
+    top: 398px;
     left: 850px;
     box-sizing: border-box;
     font-size: large;
@@ -145,21 +145,21 @@ header{
 /* <!-- BANDEIRA 1 --> */
 #img_amount{
     position: absolute;
-    top: 395px;
+    top: 414px;
     left: 787px;
 }
 
 /* <!-- BANDEIRA 1 --> */
 #img_currency{
     position: absolute;
-    top: 395px;
+    top: 414px;
     left: 1155px;
 }
 
 
 #tax_info{
     position: absolute;
-    top: 450px;
+    top: 470px;
     left: 485px;
     font-weight: 800;
 }
@@ -174,7 +174,7 @@ header{
 /* <!-- BOTAO TROCA --> */
 button{
     position: absolute;
-    top: 388px;
+    top: 409px;
     left: 805px;
     width: 35px;
     height: 35px;
