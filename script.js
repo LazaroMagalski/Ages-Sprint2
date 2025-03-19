@@ -16,7 +16,7 @@ swap.addEventListener('click', infoSwap);
 
 main();
 function main() {
-    let currency = { "BRL": "Real(BRL)", "EUR": "Euro(EUR)", "USD": "Dolar(USD)" };
+    let currency = { "BRL": "Real (BRL)", "EUR": "Euro (EUR)", "USD": "Dólar (USD)" };
     let options = [];
     for (var [key, value] of Object.entries(currency)) {
       options.push(`<option value='${key}'>${value}</option>`);
