@@ -25,7 +25,7 @@
                 <div class="grid-container">
                     <!-- Coluna 1: Quantia -->
                     <div class="grid-item">
-                        <label>Quantia</label>
+                        <label class ="quantia">Quantia</label>
                         <input type="text" id="from_ammount" placeholder="Digite o valor" required>
                         <img id="img_amount" src="" alt="">
                     </div>
@@ -41,14 +41,13 @@
                     </div>
                     <!-- Coluna 4: Resultado -->
                     <div class="grid-item">
-                        <label">Converter para</label>
-                       
+                        <label class="converter">Converter para</label>
                     </div>
 
                     <!-- Coluna 5: Moeda de destino -->
                     <div class="grid-item">
-                        <select id="to_currency"></select>
                         <input type="text" id="to_ammount">
+                        <select id="to_currency"></select>
                         <img id="img_currency" src="" alt="">
                     </div>
 
@@ -67,9 +66,9 @@
     </main>
 
     <!-- Rodapé -->
-    <footer>
+    <!-- <footer>
         <p>Desenvolvido pelo Grupo 4 - Sprint 2</p>
-    </footer>
+    </footer> -->
 <script src="script.js"></script>
 </body>
 </html>

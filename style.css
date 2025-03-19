@@ -6,13 +6,22 @@ body{
     background-color: rgb(24, 52, 30);
 }
 
-.conversor{
+header{
     font-family:'Courier New', Courier, monospace;
+    position: absolute;
+    top: 200px;
+    color: rgb(109, 192, 56);
+}
+
+/* <!-- BLOCO GERAL --> */
+.conversor{
+    font-family:Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* <!-- BLOCO BRANCO --> */
 .grid-container{
     height: 25vh;
     width: 80vh;
@@ -22,19 +31,139 @@ body{
     padding: 5px;
 }
 
+/* <!-- BLOCO VERDE --> */
 .grid-container1{
     position: absolute;
-    top: 600px;
-    left: 507px;
+    top: 550px;
+    left: 458px;
     background-color: rgb(109, 192, 56);
     height: 4vh;
     width: 80vh;
     border-radius: 0px 0px 20px 20px;
     padding: 5px;
     z-index: -1;
+}  
+
+/* <!-- TEXTO CIMA QUANTIA --> */
+.quantia{
+    position: absolute;
+    top: 360px;
+    left: 480px;
+    font-size: small;
+    font-weight: 800;
+    color: gray
 }
 
+/* <!-- TEXTO CIMA QUANTIA --> */
+.converter{
+    position: absolute;
+    top: 360px;
+    left: 850px;
+    font-size: small;
+    font-weight: 800;
+    color: gray
+}
+
+
+/* <!-- SELETOR MOEDA1 --> */
+#from_currency{
+    position: absolute;
+    top: 383px;
+    left: 665px;
+    background-color: rgb(230, 230, 230);
+    box-sizing: none;
+    font-size: medium;
+    width: 110px;
+    height: 40px;
+    
+    background-image: url(...);
+    border: 1.5px rgb(230, 230, 230);
+    border-radius: 10px;
+
+}
+
+/* <!-- SELETOR MOEDA2 --> */
+#to_currency{
+    position: absolute;
+    top: 383px;
+    left: 1035px;
+    background-color: rgb(230, 230, 230);
+    box-sizing: none;
+    font-size: medium;
+    width: 110px;
+    height: 40px;
+    
+    background-image: url(...);
+    border: 1.5px rgb(230, 230, 230);
+    border-radius: 10px;
+
+}
+
+/* <!-- TEXTO QUANTIA --> */
+#from_ammount{
+    position: absolute;
+    top: 378px;
+    left: 480px;
+    box-sizing: border-box;
+    font-size: large;
+    width: 300px;
+    height: 50px;
+
+    background-color: rgb(230, 230, 230);
+    border: 1.5px solid #1d1d1d;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 15px;
+} 
+
+/* <!-- TEXTO RESULTADO --> */
+#to_ammount{
+    position: absolute;
+    top: 378px;
+    left: 850px;
+    box-sizing: border-box;
+    font-size: large;
+    color: solid #1d1d1d;
+    width: 300px;
+    height: 50px;
+    
+    background-color: rgb(230, 230, 230);
+    border: 1.5px solid #1d1d1d;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    border-radius: 15px;
+    
+}
+
+.grid-item switch-container{
+    background-color: rgb(230, 230, 230);
+    border: 1.5px solid #E6E6E6;
+    border-radius: 15px;
+
+}
+/* <!-- BANDEIRA 1 --> */
+#img_amount{
+    position: absolute;
+    top: 395px;
+    left: 787px;
+}
+
+/* <!-- BANDEIRA 1 --> */
+#img_currency{
+    position: absolute;
+    top: 395px;
+    left: 1155px;
+}
+
+
+#tax_info{
+    position: absolute;
+    top: 450px;
+    left: 485px;
+    font-weight: 800;
+}
+
+
+/* <!-- BOTAO TROCA --> */
 #swap img{
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
 }
