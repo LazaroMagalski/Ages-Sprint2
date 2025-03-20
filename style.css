@@ -3,190 +3,168 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: rgb(24, 52, 30);
 }
 
-header{  
+/* HEADER */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+h1 {
     font-family: "Lalezar", system-ui;
     font-weight: 400;
     font-style: normal;
-  
-    position: absolute;
-    top: 200px;
     color: rgb(109, 192, 56);
+    margin: 0;
+    width: 100%;
 }
 
-/* <!-- BLOCO GERAL --> */
-.conversor{
-    font-family:Arial, Helvetica, sans-serif;
-    display: flex;
+/* BLOCO BRANCO */
+.grid-container{
+    position: absolute;
+    height: 33vh;
+    width: 100vh;
+    border-radius: 20px;
+    background-color: rgb(255, 254, 254);
+    box-shadow: -1px 5px 14px -1px rgba(0,0,0,0.56);
+    padding:5px;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 2fr; 
+    grid-template-rows: auto auto; 
+    gap: 3px;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    z-index: 1;
+    font-family: "Lalezar", system-ui;
+    font-weight: 800;
+    color: #000;
 }
 
-/* <!-- BLOCO BRANCO --> */
-.grid-container{
-    height: 20vh;
-    width: 80vh;
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: -1px 5px 14px -1px rgba(0,0,0,0.56);
-    padding: 5px;
-}
-
-/* <!-- BLOCO VERDE --> */
+/* BLOCO VERDE */
 .grid-container1{
-    position: absolute;
     top: 530px;
     left: 458px;
     background-color: rgb(109, 192, 56);
-    height: 4vh;
-    width: 80vh;
-    border-radius: 0px 0px 20px 20px;
+    height: 36vh;
+    width: 100vh;
+    border-radius: 20px 20px 20px 20px;
     padding: 5px;
     z-index: -1;
 }  
 
-/* <!-- TEXTO CIMA QUANTIA --> */
+/* COLUNA ESQUERDA */
+.coluna-esquerda {
+    grid-column: 1 / 2; 
+    display: flex;
+    flex-direction: column; /* Mantém os itens empilhados */
+    align-items:flex-start;    
+}
+.linha-esquerda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .quantia{
-    position: absolute;
-    top: 380px;
-    left: 480px;
+    font-family: "Lalezar", system-ui;
     font-size: small;
-    font-weight: 800;
-    color: gray
+    color: rgb(151, 151, 151)
 }
 
-/* <!-- TEXTO CIMA RESPOSTA --> */
-.converter{
-    position: absolute;
-    top: 380px;
-    left: 850px;
-    font-size: small;
-    font-weight: 800;
-    color: gray
-}
-
-
-/* <!-- SELETOR MOEDA1 --> */
+/* SELETOR MOEDA1 */
 #from_currency{
-    position: absolute;
-    top: 403px;
-    left: 665px;
     background-color: rgb(255, 255, 255);
-    box-sizing: none;
+    font-family: "Lalezar", system-ui;
     font-size: medium;
-    width: 110px;
-    height: 40px;
-    
-    background-image: url(...);
-    border: 1.5px rgb(255, 255, 255);
+    border: 1.5px rgb(245, 242, 242);
     border-radius: 10px;
-
 }
-
-/* <!-- SELETOR MOEDA2 --> */
-#to_currency{
-    position: absolute;
-    top: 403px;
-    left: 1035px;
-    background-color: rgb(255, 255, 255);
-    box-sizing: none;
-    font-size: medium;
-    width: 110px;
-    height: 40px;
-    
-    background-image: url(...);
-    border: 1.5px rgb(255, 255, 255);
-    border-radius: 10px;
-
-}
-
-/* <!-- TEXTO QUANTIA --> */
+/* TEXTO QUANTIA */
 #from_ammount{
-    position: absolute;
-    top: 398px;
-    left: 480px;
     box-sizing: border-box;
+    font-family: "Lalezar", system-ui;
     font-size: large;
-    width: 300px;
-    height: 50px;
-
+    width: 250px;
+    height: 70px;
     background-color: rgb(255, 255, 255);
     border: 2px solid #1d1d1d;
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     border-radius: 15px;
 } 
-
-/* <!-- TEXTO RESULTADO --> */
+/* COLUNA DIREITA */
+.coluna-direita{
+    grid-column: 3 / 4; 
+    display: flex;
+    flex-direction: column; /* Mantém os itens empilhados */
+    align-items: baseline;
+}
+.linha-direita {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.converter{
+    font-family: "Lalezar", system-ui;
+    font-size: small;
+    color: rgb(151, 151, 151)
+}
+/* SELETOR MOEDA2 */
+#to_currency{
+    background-color: rgb(255, 255, 255);
+    font-family: "Lalezar", system-ui;
+    font-size: medium;
+    border: 1.5px rgb(245, 242, 242);
+    border-radius: 10px;
+}
+/* TEXTO CONVERTER */
 #to_ammount{
-    position: absolute;
-    top: 398px;
-    left: 850px;
     box-sizing: border-box;
+    font-family: "Lalezar", system-ui;
     font-size: large;
-    color: solid #1d1d1d;
-    width: 300px;
-    height: 50px;
-    
+    width: 250px;
+    height: 70px;
     background-color: rgb(255, 255, 255);
     border: 2px solid #1d1d1d;
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     border-radius: 15px;
-    
 }
 
-.grid-item switch-container{
-    background-color: rgb(255, 255, 255);
-    border: 1.5px rgb(255, 255, 255);
-    border-radius: 15px;
-
-}
-/* <!-- BANDEIRA 1 --> */
-#img_amount{
-    position: absolute;
-    top: 414px;
-    left: 787px;
+.switch-container{
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* <!-- BANDEIRA 1 --> */
-#img_currency{
-    position: absolute;
-    top: 414px;
-    left: 1155px;
+button img {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
 }
 
-
-#tax_info{
-    position: absolute;
-    top: 470px;
-    left: 485px;
-    font-weight: 800;
+button {
+    border: none; 
+    background-color: white; 
+    cursor: pointer; 
 }
 
-
-/* <!-- IMAGEM BOTAO TROCA --> */
-#swap img{
-    width: 15px;
-    height: 15px;
+#img_currency, #img_amount{
+    width: 28px;
+    height: 21px;
+    padding: 5px;
 }
 
-/* <!-- BOTAO TROCA --> */
-button{
-    position: absolute;
-    top: 409px;
-    left: 805px;
-    width: 35px;
-    height: 35px;
-    background-color: rgb(255, 255, 255);
-    box-sizing: none;
-    background-image: url(...);
-    border: 1.5px rgb(255, 255, 255);
-    border-radius: 10px;
-
-}
-
-.grafico-container {
+.grafico-container{
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -196,8 +174,4 @@ button{
     padding: 12px;
     border-radius: 10px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-}
-#img_amount, #img_currency{
-    width: 20px;
-    height: 15px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,61 +12,55 @@
 
     <!-- Cabeçalho -->
     <header>
-        <h1>Conversor de Moedas</h1>
-        <h2><span id="currency1-name">REAIS BRASILEIROS</span> PARA <span id="currency2-name">DÓLARES AMERICANOS</span></h2>
+        <img src="convertVerde.png" alt="Logo">
+        <h1><br><span id="currency1-name"></span> PARA <span id="currency2-name"></span>
+        </h1>
     </header>
 
     <!-- Área principal do conversor -->
     <main>
         <section class="conversor">
             <form id="currency-form">
-                
-                
+
                 <!-- GRID para alinhamento -->
-                <div class="grid-container">
-                    <!-- Coluna 1: Quantia -->
-                    <div class="grid-item">
-                        <label class ="quantia">Quantia</label>
-                        <input type="text" id="from_ammount" placeholder="Digite o valor" required>
-                        <img id="img_amount" src="" alt="">
-                    </div>
-
-                    <!-- Coluna 2: Moeda de origem -->
-                    <div class="grid-item">
-                        <select id="from_currency"></select>
-                    </div>
-
-                    <!-- Coluna 3: Botão de troca -->
-                    <div class="grid-item switch-container">
-                        <button id="swap"><img src="swap.png" alt=""></button> 
-                    </div>
-                    <!-- Coluna 4: Resultado -->
-                    <div class="grid-item">
-                        <label class="converter">Converter para</label>
-                    </div>
-
-                    <!-- Coluna 5: Moeda de destino -->
-                    <div class="grid-item">
-                        <input type="text" id="to_ammount">
-                        <select id="to_currency"></select>
-                        <img id="img_currency" src="" alt="">
-                    </div>
-
-                    <!-- Coluna 6: Câmbio do dia -->
-                    <div class="grid-item">
-                        <span id="tax_info"></span>
-                        
+                <div class="grid-absolute">
+                    <div class="grid-container">
+                        <div class="coluna-esquerda">
+                            <!-- Quantia -->
+                            <label class="quantia">Quantia</label>
+                            <div class="linha-esquerda">
+                                <input type="text" id="from_ammount" placeholder="Digite o valor" required>
+                                <img id="img_amount" src="" alt="">
+                                <!-- Moeda de origem -->
+                                <select id="from_currency"></select>
+                            </div>
                         </div>
 
+                        <!-- Coluna 3: Botão de troca -->
+                        <div class="grid-item switch-container">
+                            <button id="swap"><img src="swap.svg" alt=""></button>
+                        </div>
+
+                        <div class="coluna-direita">
+                            <!-- Coluna 4: Resultado -->
+                            <label class="converter">Converter para</label>
+                            <div class="linha-direita"><!-- Coluna 5: Moeda de destino -->
+                                <input type="text" id="to_ammount">
+                                <select id="to_currency"></select>
+                                <img id="img_currency" src="" alt="">
+                            </div>
+                        </div>
+                        <!-- Coluna 6: Câmbio do dia -->
+                        <div class="cambio-dia">
+                            <span id="tax_info"></span>
+                        </div>
                     </div>
-                
+                </div>
                 </div> <!-- Fim do GRID -->
                 <div class="grid-container1"></div>
             </form>
         </section>
     </main>
-
-
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,11 +72,12 @@
     </div>
 
 
-    
+
     <!-- Rodapé -->
     <!-- <footer>
         <p>Desenvolvido pelo Grupo 4 - Sprint 2</p>
     </footer> -->
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
