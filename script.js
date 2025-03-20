@@ -35,6 +35,9 @@ function main() {
   async function getURL(url) {
     return (await fetch(url)).json();
   }
+  async function getImgURL(urlImg) {
+    return (await fetch(urlImg)).json();
+  }
   
   function getInfoSelect(select) {
     return select.options[select.selectedIndex].text;
@@ -47,22 +50,40 @@ function main() {
     let rate = rates[to];
     tax_info.innerText = `1 ${getInfoSelect(label_from_currency)} = ${rate} ${getInfoSelect(label_to_currency)}`
     input_to_ammount.value = (input_from_ammount.value * rate).toFixed(2);
+
     document.getElementById('currency1-name').innerHTML = ` ${getInfoSelect(label_from_currency)}`.toUpperCase();
     document.getElementById('currency2-name').innerHTML = ` ${getInfoSelect(label_to_currency)}`.toUpperCase();
+
     if(label_from_currency.value == "BRL") {
-      document.getElementById('img_amount').src = 'https://flagcdn.com/20x15/br.png';
+    fetch("https://restcountries.com/v3.1/name/brasil").then((response) => {
+      response.json().then((data)=> {
+        document.getElementById('img_amount').src = (data[0].flags.png);
+      })
+    })
     }else if(label_from_currency.value == "EUR") {
       document.getElementById('img_amount').src = 'https://flagcdn.com/20x15/eu.png';
     }else{
-      document.getElementById('img_amount ').src = 'https://flagcdn.com/20x15/us.png';
+      fetch("https://restcountries.com/v3.1/name/United%20States").then((response) => {
+        response.json().then((data)=> {
+          document.getElementById('img_amount').src = (data[0].flags.png);
+        })
+      })
     }
 
     if(label_to_currency.value == "BRL") {
-      document.getElementById('img_currency').src = 'https://flagcdn.com/20x15/br.png';
+      fetch("https://restcountries.com/v3.1/name/brasil").then((response) => {
+        response.json().then((data)=> {
+          document.getElementById('img_currency').src = (data[0].flags.png);
+        })
+      })
     }else if(label_to_currency.value == "EUR") {
       document.getElementById('img_currency').src = 'https://flagcdn.com/20x15/eu.png';
     }else{
-      document.getElementById('img_currency').src = 'https://flagcdn.com/20x15/us.png';
+      fetch("https://restcountries.com/v3.1/name/United%20States").then((response) => {
+        response.json().then((data)=> {
+          document.getElementById('img_currency').src = (data[0].flags.png);
+        })
+      })
     }
     //
   }
