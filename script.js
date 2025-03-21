@@ -61,7 +61,7 @@ function main() {
       })
     })
     }else if(label_from_currency.value == "EUR") {
-      document.getElementById('img_amount').src = 'https://flagcdn.com/20x15/eu.png';
+      document.getElementById('img_amount').src = 'https://flagcdn.com/eu.svg';
     }else{
       fetch("https://restcountries.com/v3.1/name/United%20States").then((response) => {
         response.json().then((data)=> {
@@ -77,7 +77,7 @@ function main() {
         })
       })
     }else if(label_to_currency.value == "EUR") {
-      document.getElementById('img_currency').src = 'https://flagcdn.com/20x15/eu.png';
+      document.getElementById('img_currency').src = 'https://flagcdn.com/eu.svg';
     }else{
       fetch("https://restcountries.com/v3.1/name/United%20States").then((response) => {
         response.json().then((data)=> {
