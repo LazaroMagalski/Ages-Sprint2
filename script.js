@@ -27,6 +27,7 @@ function main() {
   }
   
   function infoSwap() {
+    event.preventDefault();
     let temp = label_from_currency.value;
     label_from_currency.value = label_to_currency.value;
     label_to_currency.value = temp;
@@ -58,14 +59,28 @@ function main() {
     fetch("https://restcountries.com/v3.1/name/brasil").then((response) => {
       response.json().then((data)=> {
         document.getElementById('img_amount').src = (data[0].flags.png);
+        document.getElementById('logo').src = "convertVerde.png";
+        document.body.style.backgroundColor = "#203B2A";
+        document.querySelector('h1').style.color = "#6DC038";
+        document.getElementById('grid-container').style.boxShadow = "0em 0.8em #6DC038";
+
+
       })
     })
     }else if(label_from_currency.value == "EUR") {
       document.getElementById('img_amount').src = 'https://flagcdn.com/eu.svg';
+      document.getElementById('logo').src = "convertAzul.png";
+      document.body.style.backgroundColor = "#202B3B";
+      document.querySelector('h1').style.color = "#5D9CF0";
+      document.getElementById('grid-container').style.boxShadow = "0em 0.8em #5D9CF0";
     }else{
       fetch("https://restcountries.com/v3.1/name/United%20States").then((response) => {
         response.json().then((data)=> {
           document.getElementById('img_amount').src = (data[0].flags.png);
+          document.getElementById('logo').src = "convertVerm.png";
+          document.body.style.backgroundColor = "#461003";
+          document.querySelector('h1').style.color = "#FF1A1E";
+          document.getElementById('grid-container').style.boxShadow = "0em 0.8em #FF1A1E";
         })
       })
     }
@@ -85,6 +100,5 @@ function main() {
         })
       })
     }
-    //
   }
   

@@ -12,8 +12,9 @@
 
     <!-- Cabeçalho -->
     <header>
-        <img src="convertVerde.png" alt="Logo">
-        <h1><br><span id="currency1-name"></span><span style="color: rgba(255, 122, 33, 1)"> PARA </span><span id="currency2-name"></span>
+        <img src="convertVerde.png" alt="Logo" id="logo";>
+        <h1><br><span id="currency1-name"></span><span style="color: rgba(255, 122, 33, 1)"> PARA </span><span
+                id="currency2-name"></span>
         </h1>
     </header>
 
@@ -23,41 +24,37 @@
             <form id="currency-form">
 
                 <!-- GRID para alinhamento -->
-                <div class="grid-absolute">
-                    <div class="grid-container">
-                        <div class="coluna-esquerda">
-                            <!-- Quantia -->
-                            <label class="quantia">Quantia de origem</label>
-                            <div class="linha-esquerda">
-                                <!-- Moeda de origem -->
-                                <img id="img_amount" src="" alt="">
-                                <select id="from_currency"></select>
-                                <input type="text" id="from_ammount" placeholder="Digite o valor" required>
-                            </div>
-                        </div>
-
-                        <!-- Coluna 3: Botão de troca -->
-                        <div class="grid-item switch-container">
-                            <button id="swap"><img src="swap.svg" alt=""></button>
-                        </div>
-
-                        <div class="coluna-direita">
-                            <!-- Coluna 4: Resultado -->
-                            <label class="converter">Converter para</label>
-                            <div class="linha-direita"><!-- Coluna 5: Moeda de destino -->
-                                <input type="text" id="to_ammount">
-                                <select id="to_currency"></select>
-                                <img id="img_currency" src="" alt="">
-                            </div>
-                        </div>
-                        <!-- Coluna 6: Câmbio do dia -->
-                        <div class="cambio-dia">
-                            <span id="tax_info"></span>
+                <div class="grid-container" id="grid-container">
+                    <div class="coluna-esquerda">
+                        <!-- Quantia -->
+                        <label class="quantia">Quantia de origem</label>
+                        <div class="linha-esquerda">
+                            <!-- Moeda de origem -->
+                            <img id="img_amount" src="" alt="">
+                            <select id="from_currency"></select>
+                            <input type="text" id="from_ammount" placeholder="Digite o valor" required>
                         </div>
                     </div>
+
+                    <!-- Coluna 3: Botão de troca -->
+                    <div class="grid-item switch-container">
+                        <button id="swap"><img src="swap.svg" alt=""></button>
+                    </div>
+
+                    <div class="coluna-direita">
+                        <!-- Coluna 4: Resultado -->
+                        <label class="converter">Converter para</label>
+                        <div class="linha-direita"><!-- Coluna 5: Moeda de destino -->
+                            <input type="text" id="to_ammount">
+                            <select id="to_currency"></select>
+                            <img id="img_currency" src="" alt="">
+                        </div>
+                    </div>
+                    <!-- Coluna 6: Câmbio do dia -->
+                    <div class="cambio-dia">
+                        <span id="tax_info"></span>
+                    </div>
                 </div>
-                </div> <!-- Fim do GRID -->
-                <div class="grid-container1"></div>
             </form>
         </section>
     </main>
