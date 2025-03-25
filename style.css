@@ -31,13 +31,13 @@ h1 {
 /* BLOCO BRANCO */ 
 .grid-container{
     height: 25vh;
-    width: 100vh;
+    width: 50vw;
     border-radius: 20px;
     background-color: rgb(255, 254, 254);
     box-shadow: -1px 5px 14px -1px rgba(0, 0, 0, 0.56);
     padding:40px 0px 0px 5px;
-    display: grid;
-    grid-template-columns: 2fr 0.5fr 2fr; 
+    display: flex;
+    grid-template-columns: 13fr ; 
     grid-template-rows: auto auto; 
     gap: 3px;
     align-items: center;
@@ -46,11 +46,12 @@ h1 {
     font-family: "Lalezar", system-ui;
     font-weight: 800;
     color: #000;
+    flex-direction: column;
 }
 
 /* COLUNA ESQUERDA */ 
 .coluna-esquerda {
-    grid-column: 1 / 2; 
+    grid-column: 6; 
     display: flex;
     flex-direction: column;
     align-items:end;   
@@ -82,7 +83,7 @@ h1 {
     box-sizing: border-box;
     font-family: "Lalezar", system-ui;
     font-size: large;
-    width: 250px;
+    width: 15vw;
     height: 70px;
     background-color: rgb(255, 255, 255);
     border: 2px solid #1d1d1d;
@@ -91,11 +92,11 @@ h1 {
 } 
 /* COLUNA DIREITA */ 
 .coluna-direita{
-    grid-column: 3 / 4; 
+    grid-column: 6; 
     display: flex;
     flex-direction: column; 
     align-items: baseline;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 .linha-direita {
     display: flex;
@@ -124,7 +125,7 @@ h1 {
     box-sizing: border-box;
     font-family: "Lalezar", system-ui;
     font-size: large;
-    width: 250px;
+    width: 15vw;
     height: 70px;
     background-color: rgb(255, 255, 255);
     border: 2px solid #1d1d1d;
@@ -132,7 +133,7 @@ h1 {
     border-radius: 15px 0px 0px 15px;
 }
 .switch-container{
-    grid-column: 2 / 3;
+    grid-column: 1;
     height: 20px;
 }
 
@@ -159,16 +160,4 @@ button {
     height: 80px;
     padding: 5px;
    
-}
-
-.grafico-container{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 320px;
-    height: 220px;
-    background: #0000003f;
-    padding: 12px;
-    border-radius: 10px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
