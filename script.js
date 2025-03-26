@@ -23,6 +23,7 @@ function main() {
     }
     label_from_currency.innerHTML = options.join('\n');
     label_to_currency.innerHTML = options.join('\n');
+    label_to_currency.value = "USD";
     calculate();
   }
   
